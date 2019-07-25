@@ -9,7 +9,7 @@
 <h4 align="center">A web app to list public figures and cases connected with them.</h4>
 
 <p align="center">
-  <a href="#help-wanted">Help Needed</a> •
+  <a href="#help-needed">Help Needed</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#technology-stack">Technology Stack</a> •
   <a href="#license">License</a>
@@ -21,13 +21,13 @@ The parliament elections are held in my home country, Slovakia, every four years
 
 My vision for this project is very simple - create an environment for someone (either organization, co-author, activist) that would fill up the app with data. I have no intentions of writing very own content, instead, I would love the app to link from cases screen to various media from the country.
 
-Goals:
+**Goals:**
 1. Create an app that every country could use to increase the awareness of its citizens.
 2. Keep this solution apolitical.
 
 ## Help Needed
 
-Because I have more stuff on the plate to figure out I would appreciate any help with coding.
+Because I have more stuff on the plate to figure out, I would appreciate any help with coding.
 
 ## Key Features
 
@@ -39,6 +39,7 @@ Because I have more stuff on the plate to figure out I would appreciate any help
 
 - Ruby
 - Ruby on Rails
+- PostgreSQL
 - Tailwindcss
 - Webpacker
 - RSpec

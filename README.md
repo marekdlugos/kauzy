@@ -14,6 +14,8 @@
   <a href="#license">License</a>
 </p>
 
+![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+
 The parliament elections are held in my home country, Slovakia, every four years and there is a lot of bad stuff that politicians and other public figures have done. It was that much that I have easily lost track of it. Hence, I have decided to create this tool that would help people like me search for public figures, and see what cases they might be connected to so that I can make informed decisions.
 
 My vision for this project is very simple - create an environment for someone (either organization, co-author, activist) that would fill up the app with data. I have no intentions of writing very own content, instead, I would love the app to link from cases screen to various media from the country.

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :persons
   resources :cases
 
+  get 'o-projekte' => 'pages#about'
+
 end

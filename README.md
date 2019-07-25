@@ -14,7 +14,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+![screenshot](https://raw.githubusercontent.com/marekdlugos/kauzy/master/kauzy.png)
 
 The parliament elections are held in my home country, Slovakia, every four years and there is a lot of bad stuff that politicians and other public figures have done. It was that much that I have easily lost track of it. Hence, I have decided to create this tool that would help people like me search for public figures, and see what cases they might be connected to so that I can make informed decisions.
 

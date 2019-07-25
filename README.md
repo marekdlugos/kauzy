@@ -1,7 +1,7 @@
 <h1 align="center">
-  <br>
+  <!-- <br> -->
   <!-- Space for future logo -->
-  <br>
+  <!-- <br> -->
   Kauzy
   <br>
 </h1>
@@ -9,6 +9,7 @@
 <h4 align="center">A web app to list public figures and cases connected with them.</h4>
 
 <p align="center">
+  <a href="#help-wanted">Help Needed</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#technology-stack">Technology Stack</a> •
   <a href="#license">License</a>
@@ -23,6 +24,10 @@ My vision for this project is very simple - create an environment for someone (e
 Goals:
 1. Create an app that every country could use to increase the awareness of its citizens.
 2. Keep this solution apolitical.
+
+## Help Needed
+
+Because I have more stuff on the plate to figure out I would appreciate any help with coding.
 
 ## Key Features
 

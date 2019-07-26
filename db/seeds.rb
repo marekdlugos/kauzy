@@ -25,6 +25,26 @@ politicians.each do |p|
   p.delete("office_name_female")
   p.delete("latest_income")
 
-  Person.create!(p)
+  Person.find_or_create_by!(p)
 end
-puts "Politicians were seeded in the database."
+puts "Created #{Person.count} politicians."
+
+Case.create!([{
+  name: "Sasanka",
+  description: "Koncom januára 2012 sa krátko pred predčasnými voľbami dostala na verejnosť esemesková komunikácia medzi Sulíkom a kontroverzným podnikateľom Kočnerom, známym z tzv. mafiánskych zoznamov. Neskôr ju doplnilo aj video so škandalóznymi rozhovormi oboch aktérov.",
+},
+{
+  name: "Gorila",
+  description: "Prevalila sa uniknutím tajného dokumentu s krycím názvom Gorila zo Slovenskej informačnej služby na verejnosť v decembri 2011. V spise zverejnenom na internete sa nachádzajú informácie o odpočúvaní Jaroslava Haščáka, šéfa investičnej skupiny Penta, počas rokov 2005 a 2006.",
+}])
+puts "Created #{Case.count} cases."
+
+Profession.create!([{name: "politik"}, {name: "verejná osobnosť"}, {name: "podnikateľ"}])
+puts "Created #{Profession.count} professions."
+
+user = User.new
+user.email = 'admin@kauzy.sk'
+user.password = 'mainpassword'
+user.password_confirmation = 'mainpassword'
+user.save!
+puts "Created #{User.count} user."

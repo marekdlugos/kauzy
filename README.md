@@ -12,6 +12,7 @@
   <a href="#help-needed">Help Needed</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#technology-stack">Technology Stack</a> •
+  <a href="#getting-started">Getting Started</a> •
   <a href="#license">License</a>
 </p>
 

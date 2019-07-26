@@ -38,3 +38,6 @@ Case.create!([{
   description: "Prevalila sa uniknutím tajného dokumentu s krycím názvom Gorila zo Slovenskej informačnej služby na verejnosť v decembri 2011. V spise zverejnenom na internete sa nachádzajú informácie o odpočúvaní Jaroslava Haščáka, šéfa investičnej skupiny Penta, počas rokov 2005 a 2006.",
 }])
 puts "Created #{Case.count} cases."
+
+Profession.create!([{name: "politik"}, {name: "verejná osobnosť"}, {name: "podnikateľ"}])
+puts "Created #{Profession.count} professions."

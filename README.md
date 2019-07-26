@@ -44,6 +44,20 @@ Because I have more stuff on the plate to figure out, I would appreciate any hel
 - Webpacker
 - RSpec
 
+## Getting started
+
+The app is a standard Ruby on Rails application using PostgreSQL as database. The commands you will probably find the most useful are:
+
+### MacOS
+
+1. Clone the repository: `git clone https://github.com/marekdlugos/kauzy.git`
+2. Install PostgreSQL: `brew install postgresql`
+3. Start PostgreSQL: `brew services start postgresql`
+4. Create the database: `rails db:create`
+5. Create the tables: `rails db:migrate`
+6. Seed the database with basic data: `rails db:seed` 
+7. Start the server: `rails s`
+
 ## License
 
 MIT

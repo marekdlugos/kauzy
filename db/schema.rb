@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_122009) do
+ActiveRecord::Schema.define(version: 2019_07_26_123041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 2019_07_26_122009) do
   create_table "cases_links", id: false, force: :cascade do |t|
     t.bigint "case_id", null: false
     t.bigint "link_id", null: false
+  end
+
+  create_table "cases_people", id: false, force: :cascade do |t|
+    t.bigint "person_id", null: false
+    t.bigint "case_id", null: false
+    t.index ["case_id"], name: "index_cases_people_on_case_id"
+    t.index ["person_id"], name: "index_cases_people_on_person_id"
   end
 
   create_table "links", force: :cascade do |t|

@@ -27,7 +27,7 @@ politicians.each do |p|
 
   Person.find_or_create_by!(p)
 end
-puts "Politicians were seeded in the database."
+puts "Created #{Person.count} politicians."
 
 Case.create!([{
   name: "Sasanka",
@@ -41,3 +41,10 @@ puts "Created #{Case.count} cases."
 
 Profession.create!([{name: "politik"}, {name: "verejná osobnosť"}, {name: "podnikateľ"}])
 puts "Created #{Profession.count} professions."
+
+user = User.new
+user.email = 'admin@kauzy.sk'
+user.password = 'mainpassword'
+user.password_confirmation = 'mainpassword'
+user.save!
+puts "Created #{User.count} user."

@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_07_26_123041) do
   create_table "cases_links", id: false, force: :cascade do |t|
     t.bigint "case_id", null: false
     t.bigint "link_id", null: false
+    t.index ["case_id"], name: "index_cases_links_on_case_id"
+    t.index ["link_id"], name: "index_cases_links_on_link_id"
   end
 
   create_table "cases_people", id: false, force: :cascade do |t|

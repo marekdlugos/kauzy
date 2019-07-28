@@ -1,7 +1,7 @@
 class CasesController < ApplicationController
 
   def index
-    @cases = Case.all
+    @cases = Case.order(:name).page params[:page]
   end
 
   def show

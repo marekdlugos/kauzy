@@ -1,4 +1,4 @@
-<h1 class="font-sans break-normal text-gray-900 font-bold text-xl">Politici (<%= @persons.count %>)</h1>
+<h1 class="font-sans break-normal text-gray-900 font-bold text-xl">Politici (<%= @persons.total_count %>)</h1>
 <small>Toto sú veréjne osobnosti, ktoré momentálne evidujeme v našej databáze.</small>
 
 <% @persons.in_groups_of(2, false).each do |group| %>
@@ -21,3 +21,5 @@
   </div>
 
 <% end %>
+
+<%= paginate @persons %>

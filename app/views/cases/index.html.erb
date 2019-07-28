@@ -1,4 +1,4 @@
-<h1 class="font-sans break-normal text-gray-900 font-bold text-xl">Kauzy (<%= @cases.count %>)</h1>
+<h1 class="font-sans break-normal text-gray-900 font-bold text-xl">Kauzy (<%= @cases.total_count %>)</h1>
 <small>Toto sú kauzy, ktoré momentálne evidujeme v našej databáze.</small>
 
 <% @cases.each do |c| %>
@@ -10,3 +10,5 @@
   </div>
 
 <% end %>
+
+<%= paginate @cases %>

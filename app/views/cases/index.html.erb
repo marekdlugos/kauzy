@@ -6,9 +6,7 @@
   <div class="rounded border border-gray-400 bg-white mt-4 mb-2 p-6">
     <h2 class="font-sans break-normal text-gray-900 pb-2 font-bold text-xl"><%= c.name %></h2>
     <p><%= c.description %></p>
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
-      Zistiť viac
-    </button>
+    <%= link_to 'Zistiť viac', case_path(c), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 inline-block rounded" %>
   </div>
 
 <% end %>

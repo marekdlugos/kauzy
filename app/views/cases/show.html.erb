@@ -1,0 +1,55 @@
+<h1 class="font-sans break-normal text-gray-900 pb-2 font-bold text-xl"><%= @case.name %></h1>
+<p><%= @case.description %></p>
+
+<h2 class="font-sans break-normal text-gray-900 pb-2 mt-6 font-bold text-l">
+  Ľudia spájaní s touto kauzou <% if @associated_persons.present? %>(<%= @associated_persons.count %>)<% end %>
+</h2>
+<% if @associated_persons.empty? %>
+  <p>S touto kauzou zatiaľ neboli spojené žiadne osoby.</p>
+<% else %>
+  <div class="flex mb-4">
+    <% @associated_persons.each do |person| %>
+
+      <%= link_to person_path(person), title: person.name.full do %>
+        <div class="rounded border border-gray-400 hover:shadow-lg shadow-none bg-white mt-2 mb-2 mr-3 w-32 truncate">
+          <div style="background-image: url('<%= person.img_url %>')" class="bg-cover h-32"></div>
+          <p class="block p-2"><%= person.name.truncate(13) %></p>
+        </div>
+      <% end %>
+
+    <% end %>
+  </div>
+<% end %>
+
+<h2 class="font-sans break-normal text-gray-900 pb-2 mt-6 font-bold text-l">
+  Prečítajte si viac <% if @associated_links.present? %>(<%= @associated_links.count %>)<% end %>
+</h2>
+<% if @associated_links.empty? %>
+  <p>K tejto kauze zatiaľ neboli pridané žiadne odkazy.</p>
+<% else %>
+  <% @associated_links.in_groups_of(2, false).each do |group| %>
+    <div class="mb-4">
+      <% group.each do |link| %>
+        <%= link_to link.url, title: link.title, target: :_blank do %>
+          <div class="w-2/4">
+
+            <div class="rounded border flex border-gray-400 mt-2 mb-2 shadow-none hover:shadow-lg">
+              <% if link.img_url.present? %>
+                <div class="bg-cover w-1/6" style="background-image: url('<%= link.img_url %>')"></div>
+              <% else %>
+                <div class="bg-cover w-1/6" style="background-image: url('https://via.placeholder.com/128')"></div>
+              <% end %>
+              <div class="pr-2 pt-2 pb-2 pl-2 w-5/6">
+              <h3 class="font-sans break-normal text-gray-900 font-bold text-xl">
+                <%= link.title.truncate(35) %>
+              </h3>
+              <small class="block text-gray-500"><%= link.url.truncate(40) %></small>
+              </div>
+            </div>
+
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

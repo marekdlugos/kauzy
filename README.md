@@ -28,7 +28,7 @@ My vision for this project is very simple - create an environment for someone (e
 
 ## Help Needed
 
-Because I have more stuff on the plate to figure out, I would appreciate any help with coding.
+Since I have to take care of the project as whole, I would truly appreciate help with coding. A good place to start is to check out the [list of issues](https://github.com/marekdlugos/kauzy/issues).
 
 ## Key Features
 

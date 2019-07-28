@@ -6,8 +6,8 @@ class CasesController < ApplicationController
 
   def show
     @case = Case.friendly.find(params[:id])
-    @persons = Person.all
-    @links = Link.all
+    @associated_persons = @case.people
+    @associated_links = @case.links
   end
 
 end

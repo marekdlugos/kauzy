@@ -1,47 +1,48 @@
 <h1 class="font-sans break-normal text-gray-900 pb-2 font-bold text-xl"><%= @case.name %></h1>
-<p class="w-3/5"><%= @case.description %></p>
+<p><%= @case.description %></p>
 
 <h2 class="font-sans break-normal text-gray-900 pb-2 mt-6 font-bold text-l">
-  Ľudia spájaní s touto kauzou <% if @associated_persons.empty? %>(<%= @associated_persons.count %>)<% end %>
+  Ľudia spájaní s touto kauzou <% if @associated_persons.present? %>(<%= @associated_persons.count %>)<% end %>
 </h2>
 <% if @associated_persons.empty? %>
   <p>S touto kauzou zatiaľ neboli spojené žiadne osoby.</p>
 <% else %>
   <div class="flex mb-4">
     <% @associated_persons.each do |person| %>
-      <div class="rounded border border-gray-400 shadow-lg bg-white mt-2 mb-2 mr-3">
-        <img src="<%= person.img_url %>" alt="Robert Fico" width="128" class="block">
-        <%= link_to person.name, person_path(person), class: "block p-2" %>
 
-      </div>
+      <%= link_to person_path(person) do %>
+        <div class="rounded border border-gray-400 hover:shadow-lg shadow-none bg-white mt-2 mb-2 mr-3">
+          <img src="<%= person.img_url %>" alt="<%= person.name.full %>" width="128" class="block">
+          <p class="block p-2"><%= person.name %></p>
+        </div>
+      <% end %>
+
     <% end %>
   </div>
 <% end %>
 
 <h2 class="font-sans break-normal text-gray-900 pb-2 mt-6 font-bold text-l">
-  Prečítajte si viac <% if @associated_links.empty? %>(<%= @associated_links.count %>)<% end %>
+  Prečítajte si viac <% if @associated_links.present? %>(<%= @associated_links.count %>)<% end %>
 </h2>
 <% if @associated_links.empty? %>
   <p>K tejto kauze zatiaľ neboli pridané žiadne odkazy.</p>
 <% else %>
   <% @associated_links.in_groups_of(2, false).each do |group| %>
-    <div class="flex mb-4">
+    <div class="mb-4">
       <% group.each do |link| %>
-        <div class="w-1/2">
+        <%= link_to link.url, target: :_blank do %>
+          <div class="w-2/4">
 
-          <div class="rounded border border-gray-400 bg-white mt-2 mb-2 p-6">
+            <div class="rounded border border-gray-400 mt-2 mb-2 shadow-none hover:shadow-lg">
+              <img src="<%= link.img_url %>" alt="<%= link.title %>" class="inline-block mr-2" width="40" height="40">
+              <div class="pr-2 pt-2 pb-2 inline-block">
+              <h3 class="font-sans break-normal text-gray-900 font-bold text-xl"><%= link.title %></h3>
+              <small class="block"><%= link.url.truncate(40) %></small>
+              </div>
+            </div>
 
-            <h3 class="font-sans break-normal text-gray-900 font-bold text-xl"><%= link.title %></h3>
-            <small class="block"><%= link.url.truncate(40) %></small>
-            <% if link.perex.present? %>
-              <p class="mt-3">
-                <%= link.perex.truncate(100) %>
-              </p>
-            <% end %>
-            <%= link_to 'Číťať', link.url, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 inline-block rounded" , target: :_blank %>
           </div>
-
-        </div>
+        <% end %>
       <% end %>
     </div>
   <% end %>

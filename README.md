@@ -28,7 +28,9 @@ My vision for this project is very simple - create an environment for someone (e
 
 ## Help Needed
 
-Since I have to take care of the project as whole, I would truly appreciate help with coding. A good place to start is to check out the [list of issues](https://github.com/marekdlugos/kauzy/issues).
+Since I have to take care of the project as whole, I would truly appreciate help with coding. A good place to start is to check out the [list of issues](https://github.com/marekdlugos/kauzy/issues). 
+
+Additionally, make sure you join [our community Facebook Group](https://www.facebook.com/groups/549857232504407/) (preferred language is Slovak for now).
 
 ## Key Features
 

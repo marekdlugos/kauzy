@@ -2,12 +2,12 @@
   "name": "kauzy",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.0.7"
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@rails/webpacker": "^4.0.7",
+    "autoprefixer": "^9.6.0",
+    "tailwindcss": "^1.0.4"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.2.0",
-    "autoprefixer": "^9.6.0",
-    "tailwindcss": "^1.0.4",
     "webpack-dev-server": "^3.7.2"
   }
 }

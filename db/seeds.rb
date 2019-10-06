@@ -90,6 +90,14 @@ end
 puts "Created #{Case.count} cases."
 
 #
+# Professions
+#
+[{ name: 'politik' }, { name: 'verejná osobnosť' }, { name: 'podnikateľ' }].each do |attributes|
+  Profession.find_or_create_by!(attributes)
+end
+puts "Created #{Profession.count} professions."
+
+#
 # Associations
 #
 
@@ -111,13 +119,14 @@ sample2 = Person.all.sample(8)
 sample1.each { |person| sasanka.people << person }
 sample2.each { |person| gorila.people << person }
 
-#
-# Professions
-#
-[{ name: 'politik' }, { name: 'verejná osobnosť' }, { name: 'podnikateľ' }].each do |attributes|
-  Profession.find_or_create_by!(attributes)
+# Association People <> Professions
+# This can be done as all the initial people in the database are politicians.
+politicians.each do |p|
+  p['profession_id'] = 1
+  Person.find_or_create_by!(p)
 end
-puts "Created #{Profession.count} professions."
+puts "Set #{Person.count} people to politicians."
+
 
 #
 # Users

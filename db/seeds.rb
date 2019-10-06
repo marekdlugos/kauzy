@@ -121,10 +121,7 @@ sample2.each { |person| gorila.people << person }
 
 # Association People <> Professions
 # This can be done as all the initial people in the database are politicians.
-politicians.each do |p|
-  p['profession_id'] = 1
-  Person.find_or_create_by!(p)
-end
+Person.update_all(profession_id: 1)
 puts "Set #{Person.count} people to politicians."
 
 

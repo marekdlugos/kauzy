@@ -24,6 +24,7 @@ gem 'onebox'
 gem 'kaminari'
 gem 'administrate'
 gem 'friendly_id', '~> 5.2.4'
+gem 'rails-i18n', '~> 5.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

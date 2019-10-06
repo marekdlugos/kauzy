@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_26_124254) do
+ActiveRecord::Schema.define(version: 2019_10_06_201149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_07_26_124254) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
+    t.boolean "is_approved"
+    t.datetime "approved_at"
     t.index ["slug"], name: "index_cases_on_slug", unique: true
   end
 
@@ -56,6 +58,8 @@ ActiveRecord::Schema.define(version: 2019_07_26_124254) do
     t.text "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_approved"
+    t.datetime "approved_at"
   end
 
   create_table "people", force: :cascade do |t|

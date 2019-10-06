@@ -1,5 +1,29 @@
-<div class="font-sans">
-  <span class="text-base text-purple-500 font-bold">&laquo;<span> <a href="#" class="text-base md:text-sm text-purple-500 font-bold no-underline hover:underline">Back Link</a></p>
-   <h1 class="font-sans break-normal text-gray-900 pt-6 pb-2 text-xl">Pages / index</h1>
-  <hr class="border-b border-gray-400">
+<div class="flex mb-4">
+  <div class="w-1/2 pr-2">
+    <h2>Najkontroverznejší politici</h2>
+    <% 5.times do %>
+    <div class="bg-white shadow-md border flex rounded px-4 pt-3 pb-4 mb-4">
+      <img src="http://www.nrsr.sk/web/dynamic/PoslanecPhoto.aspx?PoslanecID=40&ImageWidth=48" alt="Robert Fico" class="h-16 w-16 rounded-full object-cover">
+      <div class="flex-auto ml-2">
+        <h3>Robert Fico</h3>
+        <span>Spajaný so 40 kauzami.</span>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="w-1/2 pl-2">
+    <h2>Najkontroverznejšie politické strany</h2>
+    <% 5.times do %>
+      <div class="bg-white shadow-md border flex rounded px-4 pt-3 pb-4 mb-4">
+        <img src="http://www.nrsr.sk/web/dynamic/PoslanecPhoto.aspx?PoslanecID=40&ImageWidth=48" alt="Robert Fico" class="h-16 w-16 rounded-full object-cover">
+        <div class="flex-auto ml-2">
+          <h3>SMER</h3>
+          <span>Spajaný so 40 kauzami.</span>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+<p>Táto databáza sa neustále rozširuje a tak je nemožné, aby štatistiky uvedené vyššie zodpovedali absolútne realite.</p>
